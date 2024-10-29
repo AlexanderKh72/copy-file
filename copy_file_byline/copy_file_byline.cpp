@@ -8,7 +8,7 @@ const size_t N{ 50 };
 int main(int argc, char** argv)
 {
     char s[N];
-    if (argc != 3)
+      if (argc != 3)
     {
         std::cout << "Wrong number of arguments! Requires 2 arguments";
         return 0;
@@ -21,9 +21,8 @@ int main(int argc, char** argv)
     }
     FILE* outpt = fopen(argv[2], "w");
 
-    while (!feof(inpt))
+    while (fgets(s, N, inpt))
     {
-        fgets(s, N, inpt);
         fputs(s, outpt);
     }
 
